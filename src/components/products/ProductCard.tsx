@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, ShoppingCart } from "lucide-react";
+import { Check, ShoppingCart, MessageCircle } from "lucide-react";
 import { useCart } from "@/hooks/use-cart";
 import { toast } from "sonner";
 
@@ -23,6 +23,10 @@ export function ProductCard({ product }: ProductCardProps) {
   const handleAddToCart = () => {
     addItem(product);
     toast.success(`${product.name} adicionado ao carrinho!`);
+  };
+
+  const handleSupportClick = () => {
+    window.open(`https://wa.me/5500000000000?text=Olá, gostaria de saber mais sobre o produto: ${product.name}`, '_blank');
   };
 
   return (
@@ -48,6 +52,15 @@ export function ProductCard({ product }: ProductCardProps) {
           </span>
         </div>
         <CardTitle className="mt-2 line-clamp-1">{product.name}</CardTitle>
+        <Button 
+          variant="outline" 
+          size="sm" 
+          className="mt-2 w-fit gap-2 h-8 text-xs" 
+          onClick={handleSupportClick}
+        >
+          <MessageCircle className="h-3.5 w-3.5" />
+          Suporte
+        </Button>
       </CardHeader>
       <CardContent className="flex-1">
         <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
