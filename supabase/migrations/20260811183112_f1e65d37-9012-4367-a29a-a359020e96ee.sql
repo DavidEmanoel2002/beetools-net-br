@@ -1,0 +1,1 @@
+UPDATE public.products SET image_url = '/__l5e/assets-v1/fcda6bdc-fbd3-4362-adec-29c39f5b35ff/iptv-logo-new.png', updated_at = now() WHERE name = 'Pluffy IPTV Premium';
