@@ -16,9 +16,6 @@ export function Hero() {
             A plataforma completa para gerenciar, escalar e automatizar seu negócio de ferramentas digitais. Tudo que você precisa em um só lugar.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="h-12 px-8">
-              Começar Agora <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
             <Button size="lg" variant="outline" className="h-12 px-8">
               Ver Catálogo
             </Button>

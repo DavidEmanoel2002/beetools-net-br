@@ -121,7 +121,7 @@ export function Header() {
               )}
             </SheetContent>
           </Sheet>
-          <Button className="hidden sm:inline-flex">Entrar</Button>
+          
           <Button variant="ghost" size="icon" className="md:hidden">
             <Menu className="h-5 w-5" />
           </Button>
