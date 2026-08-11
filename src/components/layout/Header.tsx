@@ -1,12 +1,12 @@
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Menu, MessageCircle } from "lucide-react";
-import { useCart } from "@/hooks/use-cart";
+import { useCart, type CartItem } from "@/hooks/use-cart";
 import { Badge } from "@/components/ui/badge";
 
 export function Header() {
   const { items } = useCart();
-  const itemCount = items.reduce((acc, item) => acc + item.quantity, 0);
+  const itemCount = items.reduce((acc: number, item: CartItem) => acc + item.quantity, 0);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
