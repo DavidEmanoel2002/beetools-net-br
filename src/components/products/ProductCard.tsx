@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check } from "lucide-react";
+import { Check, ShoppingCart } from "lucide-react";
+import { useCart } from "@/hooks/use-cart";
+import { toast } from "sonner";
 
 interface ProductCardProps {
   product: {
@@ -16,8 +18,15 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product }: ProductCardProps) {
+  const { addItem } = useCart();
+
+  const handleAddToCart = () => {
+    addItem(product);
+    toast.success(`${product.name} adicionado ao carrinho!`);
+  };
+
   return (
-    <Card className="flex flex-col overflow-hidden transition-all hover:shadow-lg">
+    <Card className="flex flex-col overflow-hidden transition-all hover:shadow-lg bg-card border-border">
       <div className="aspect-video w-full overflow-hidden bg-muted">
         {product.image_url ? (
           <img
@@ -33,9 +42,9 @@ export function ProductCard({ product }: ProductCardProps) {
       </div>
       <CardHeader>
         <div className="flex items-center justify-between">
-          <Badge variant="secondary">{product.category || 'General'}</Badge>
+          <Badge variant="secondary" className="bg-secondary text-secondary-foreground">{product.category || 'Geral'}</Badge>
           <span className="text-lg font-bold text-primary">
-            ${Number(product.price).toFixed(2)}
+            R$ {Number(product.price).toFixed(2)}
           </span>
         </div>
         <CardTitle className="mt-2 line-clamp-1">{product.name}</CardTitle>
@@ -54,7 +63,10 @@ export function ProductCard({ product }: ProductCardProps) {
         </ul>
       </CardContent>
       <CardFooter>
-        <Button className="w-full">Comprar Agora</Button>
+        <Button onClick={handleAddToCart} className="w-full gap-2">
+          <ShoppingCart className="h-4 w-4" />
+          Adicionar ao Carrinho
+        </Button>
       </CardFooter>
     </Card>
   );
