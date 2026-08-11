@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import { ShoppingCart, Menu, MessageCircle, Trash2, Plus, Minus, Search } from "lucide-react";
+import { ShoppingCart, Menu, MessageCircle, Trash2, Plus, Minus, Search, X } from "lucide-react";
 import { useCart, type CartItem } from "@/hooks/use-cart";
+import { useSearch } from "@/hooks/use-search";
 import { Badge } from "@/components/ui/badge";
 import {
   Sheet,
@@ -11,13 +12,17 @@ import {
   SheetTrigger,
   SheetFooter,
 } from "@/components/ui/sheet";
+import { Input } from "@/components/ui/input";
+
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 
 export function Header() {
   const { items, updateQuantity, removeItem, clearCart } = useCart();
+  const { searchQuery, setSearchQuery } = useSearch();
   const itemCount = items.reduce((acc: number, item: CartItem) => acc + item.quantity, 0);
   const total = items.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -32,10 +37,24 @@ export function Header() {
           <Link to="/" className="transition-colors hover:text-primary">Início</Link>
           <a href="#products" className="transition-colors hover:text-primary">Ferramentas</a>
           <div className="flex items-center gap-4">
-            <button className="flex items-center gap-1 transition-colors hover:text-primary cursor-pointer">
-              <Search className="h-4 w-4" />
-              <span>Pesquisar</span>
-            </button>
+            <div className="relative flex items-center">
+              <Search className="absolute left-2.5 h-4 w-4 text-muted-foreground" />
+              <Input
+                type="search"
+                placeholder="Pesquisar ferramentas..."
+                className="pl-9 h-9 w-[200px] lg:w-[300px] bg-muted/50 border-none focus-visible:ring-1 focus-visible:ring-primary"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+              {searchQuery && (
+                <button 
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-2.5 hover:text-primary transition-colors"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              )}
+            </div>
             <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 transition-colors hover:text-primary">
               <MessageCircle className="h-4 w-4" />
               Suporte
