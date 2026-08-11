@@ -6,6 +6,8 @@ import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/home/Hero";
 import { Features } from "@/components/home/Features";
 import { ProductCard } from "@/components/products/ProductCard";
+import { useSearch } from "@/hooks/use-search";
+
 
 const productsQueryOptions = {
   queryKey: ["products"],
@@ -37,9 +39,16 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const { data: products } = useSuspenseQuery(productsQueryOptions);
+  const { searchQuery } = useSearch();
 
-  const tools = products.filter(p => p.category !== 'IPTV');
-  const iptv = products.filter(p => p.category === 'IPTV');
+  const filteredProducts = products.filter(p => 
+    p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    (p.description && p.description.toLowerCase().includes(searchQuery.toLowerCase()))
+  );
+
+  const tools = filteredProducts.filter(p => p.category !== 'IPTV');
+  const iptv = filteredProducts.filter(p => p.category === 'IPTV');
+
 
   return (
     <div className="flex min-h-screen flex-col">
