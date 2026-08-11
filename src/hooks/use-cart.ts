@@ -12,6 +12,7 @@ export interface CartItem {
 interface CartState {
   items: CartItem[];
   addItem: (product: { id: string; name: string; price: number; image_url: string | null }) => void;
+  updateQuantity: (id: string, delta: number) => void;
   removeItem: (id: string) => void;
   clearCart: () => void;
 }
@@ -44,6 +45,15 @@ export const useCart = create<CartState>()(
               },
             ],
           };
+        }),
+      updateQuantity: (id, delta) =>
+        set((state: CartState) => {
+          const items = state.items
+            .map((item) =>
+              item.id === id ? { ...item, quantity: Math.max(0, item.quantity + delta) } : item
+            )
+            .filter((item) => item.quantity > 0);
+          return { items };
         }),
       removeItem: (id) =>
         set((state: CartState) => ({
