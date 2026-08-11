@@ -26,8 +26,7 @@ export function Hero() {
           </div>
           
           <h1 className="text-5xl font-extrabold tracking-tight sm:text-7xl text-white mb-6">
-            Seja Bem-vindo(a) na <br />
-            <span className="text-orange-500">Pluffy</span>
+            Seja Bem-vindo(a)
           </h1>
           
           <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400">
