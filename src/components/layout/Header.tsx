@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import { ShoppingCart, Menu, MessageCircle, Trash2, Plus, Minus } from "lucide-react";
+import { ShoppingCart, Menu, MessageCircle, Trash2, Plus, Minus, Search } from "lucide-react";
 import { useCart, type CartItem } from "@/hooks/use-cart";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -31,10 +31,16 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           <Link to="/" className="transition-colors hover:text-primary">Início</Link>
           <a href="#products" className="transition-colors hover:text-primary">Ferramentas</a>
-          <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 transition-colors hover:text-primary">
-            <MessageCircle className="h-4 w-4" />
-            Suporte
-          </a>
+          <div className="flex items-center gap-4">
+            <button className="flex items-center gap-1 transition-colors hover:text-primary cursor-pointer">
+              <Search className="h-4 w-4" />
+              <span>Pesquisar</span>
+            </button>
+            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 transition-colors hover:text-primary">
+              <MessageCircle className="h-4 w-4" />
+              Suporte
+            </a>
+          </div>
         </nav>
 
         <div className="flex items-center gap-4">
