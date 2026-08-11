@@ -7,29 +7,35 @@ interface ProductCardProps {
   product: {
     id: string;
     name: string;
-    description: string;
+    description: string | null;
     price: number;
-    image_url: string;
-    category: string;
-    features: string[];
+    image_url: string | null;
+    category: string | null;
+    features: string[] | null;
   };
 }
 
 export function ProductCard({ product }: ProductCardProps) {
   return (
     <Card className="flex flex-col overflow-hidden transition-all hover:shadow-lg">
-      <div className="aspect-video w-full overflow-hidden">
-        <img
-          src={product.image_url}
-          alt={product.name}
-          className="h-full w-full object-cover transition-transform hover:scale-105"
-        />
+      <div className="aspect-video w-full overflow-hidden bg-muted">
+        {product.image_url ? (
+          <img
+            src={product.image_url}
+            alt={product.name}
+            className="h-full w-full object-cover transition-transform hover:scale-105"
+          />
+        ) : (
+          <div className="h-full w-full flex items-center justify-center text-muted-foreground">
+            No image
+          </div>
+        )}
       </div>
       <CardHeader>
         <div className="flex items-center justify-between">
-          <Badge variant="secondary">{product.category}</Badge>
+          <Badge variant="secondary">{product.category || 'General'}</Badge>
           <span className="text-lg font-bold text-primary">
-            ${product.price.toFixed(2)}
+            ${Number(product.price).toFixed(2)}
           </span>
         </div>
         <CardTitle className="mt-2 line-clamp-1">{product.name}</CardTitle>
