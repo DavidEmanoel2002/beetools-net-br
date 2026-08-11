@@ -31,17 +31,21 @@ export function ProductCard({ product }: ProductCardProps) {
 
   return (
     <Card className="flex flex-col overflow-hidden transition-all hover:shadow-lg bg-card border-border">
-      <div className="aspect-video w-full overflow-hidden bg-muted">
+      <div className="aspect-video w-full overflow-hidden bg-white flex items-center justify-center p-4">
         {product.image_url ? (
           <img
             src={product.image_url}
             alt={product.name}
-              className={`h-full w-full transition-transform hover:scale-105 object-contain p-4`}
-
+            className="max-h-full max-w-full transition-transform hover:scale-105 object-contain"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.onerror = null;
+              target.src = `https://placehold.co/400x250/1a1a1a/ffffff?text=${encodeURIComponent(product.name)}`;
+            }}
           />
         ) : (
-          <div className="h-full w-full flex items-center justify-center text-muted-foreground">
-            No image
+          <div className="h-full w-full flex items-center justify-center text-muted-foreground bg-muted">
+            Sem imagem
           </div>
         )}
       </div>
