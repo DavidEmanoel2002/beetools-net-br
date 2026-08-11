@@ -38,6 +38,9 @@ export const Route = createFileRoute("/")({
 function Index() {
   const { data: products } = useSuspenseQuery(productsQueryOptions);
 
+  const tools = products.filter(p => p.category !== 'IPTV');
+  const iptv = products.filter(p => p.category === 'IPTV');
+
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -47,17 +50,34 @@ function Index() {
         <section id="products" className="py-24">
           <div className="container">
             <div className="flex flex-col items-center justify-center text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Nosso Catálogo</h2>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Ferramentas Digitais</h2>
               <p className="mt-4 text-muted-foreground max-w-2xl">
-                Explore nossa seleção curada de ferramentas de alta performance projetadas para acelerar seu crescimento.
+                As melhores ferramentas para o seu fluxo de trabalho criativo e produtivo.
               </p>
             </div>
             
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {products.map((product) => (
+              {tools.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}
             </div>
+
+            {iptv.length > 0 && (
+              <>
+                <div className="flex flex-col items-center justify-center text-center mt-32 mb-16">
+                  <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">IPTV & Entretenimento</h2>
+                  <p className="mt-4 text-muted-foreground max-w-2xl">
+                    Sua dose diária de entretenimento com a melhor qualidade.
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                  {iptv.map((product) => (
+                    <ProductCard key={product.id} product={product} />
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </section>
 
