@@ -36,7 +36,11 @@ export function ProductCard({ product }: ProductCardProps) {
           <img
             src={product.image_url}
             alt={product.name}
-            className="h-full w-full object-cover transition-transform hover:scale-105"
+            className={`h-full w-full transition-transform hover:scale-105 ${
+              product.name.toLowerCase().includes('gemini') 
+                ? 'object-contain p-4' 
+                : 'object-cover'
+            }`}
           />
         ) : (
           <div className="h-full w-full flex items-center justify-center text-muted-foreground">
