@@ -10,7 +10,7 @@ export function Hero() {
             Novidade: SEO Master Pro v2.0
           </Badge>
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl">
-            Impulsione suas <span className="text-primary">Vendas Digitais</span> com Inteligência
+            Bem-vindo! Impulsione suas <span className="text-primary">Vendas Digitais</span> com Inteligência
           </h1>
           <p className="mt-6 text-xl text-muted-foreground">
             A plataforma completa para gerenciar, escalar e automatizar seu negócio de ferramentas digitais. Tudo que você precisa em um só lugar.
