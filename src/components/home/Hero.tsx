@@ -9,11 +9,12 @@ export function Hero() {
         <div 
           className="absolute inset-0 opacity-[0.15]" 
           style={{ 
-            backgroundImage: `linear-gradient(to right, #ffffff10 1px, transparent 1px), linear-gradient(to bottom, #ffffff10 1px, transparent 1px)`,
-            backgroundSize: '40px 40px'
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='56' height='100' viewBox='0 0 56 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100' fill='none' stroke='%23f97316' stroke-width='1' stroke-opacity='0.1'/%3E%3C/svg%3E")`,
+            backgroundSize: '56px 100px'
           }} 
         />
-        <div className="absolute right-0 top-0 h-[600px] w-[600px] -translate-y-1/2 translate-x-1/2 rounded-full bg-orange-600/5 blur-[120px]" />
+        <div className="absolute right-0 top-0 h-[600px] w-[600px] -translate-y-1/2 translate-x-1/2 rounded-full bg-orange-500/10 blur-[120px]" />
+        <div className="absolute left-0 bottom-0 h-[400px] w-[400px] translate-y-1/2 -translate-x-1/2 rounded-full bg-orange-600/5 blur-[100px]" />
       </div>
 
       <div className="container relative z-10">
@@ -26,7 +27,7 @@ export function Hero() {
           </div>
           
           <h1 className="text-5xl font-extrabold tracking-tight sm:text-7xl text-white mb-6">
-            Seja Bem-vindo(a)
+            Seja Bem-vindo à <span className="text-orange-500">Bee Tools</span>
           </h1>
           
           <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400">
@@ -46,7 +47,7 @@ export function Hero() {
               { label: "RÁPIDO", sub: "ENTREGA AUTOMÁTICA" },
               { label: "100%", sub: "COMPRA SEGURA" }
             ].map((stat, i) => (
-              <div key={i} className="flex flex-col items-center justify-center rounded-2xl border border-white/5 bg-white/5 p-6 backdrop-blur-sm">
+              <div key={i} className="flex flex-col items-center justify-center rounded-2xl border border-orange-500/10 bg-orange-500/5 p-6 backdrop-blur-sm hover:border-orange-500/30 transition-colors">
                 <span className="text-2xl font-bold text-white">{stat.label}</span>
                 <span className="mt-1 text-xs font-bold text-orange-500 tracking-wider">{stat.sub}</span>
               </div>
