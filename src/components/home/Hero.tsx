@@ -3,7 +3,7 @@ import { ArrowRight, Zap, Shield, BarChart3 } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Hero() {
-  const containerVariants = {
+  const containerVariants: any = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -14,7 +14,7 @@ export function Hero() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: any = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
