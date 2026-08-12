@@ -13,7 +13,7 @@ export function Hero() {
             backgroundSize: '40px 40px'
           }} 
         />
-        <div className="absolute right-0 top-0 h-[600px] w-[600px] -translate-y-1/2 translate-x-1/2 rounded-full bg-orange-600/20 blur-[120px]" />
+        <div className="absolute right-0 top-0 h-[600px] w-[600px] -translate-y-1/2 translate-x-1/2 rounded-full bg-orange-600/5 blur-[120px]" />
       </div>
 
       <div className="container relative z-10">
