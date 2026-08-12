@@ -75,7 +75,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <CardTitle className="mt-2 line-clamp-1 group-hover:text-yellow-500 transition-colors text-white text-sm md:text-lg">{product.name}</CardTitle>
         
         <div className="flex flex-col gap-2 mt-2">
-          {product.category === 'IPTV' && (
+          {product.category === 'IPTV' && !['netflix', 'spotify', 'hbo max', 'netflix premium', 'spotify premium', 'hbo max premium'].some(name => product.name.toLowerCase().includes(name)) && (
             <Dialog>
               <DialogTrigger asChild>
                 <Button 
