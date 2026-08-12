@@ -35,7 +35,7 @@ export function ProductCard({ product }: ProductCardProps) {
   };
 
   const handleSupportClick = () => {
-    window.open(`https://wa.me/5500000000000?text=Olá, gostaria de saber mais sobre o produto: ${product.name}`, '_blank');
+    window.open(`https://wa.me/558896261696?text=Ol%C3%A1%2C+tenho+interesse+nos+produtos+da+Bee+Tools.+Poderia+me+passar+mais+informa%C3%A7%C3%B5es%3F&utm_source=chatgpt.com`, '_blank');
   };
 
   return (
