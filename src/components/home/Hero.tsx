@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, Shield, BarChart3 } from "lucide-react";
+import { motion } from "framer-motion";
 import beeLogo from "@/assets/bee-logo.png.asset.json";
+
 
 export function Hero() {
   const containerVariants: any = {
