@@ -1,10 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, ShoppingCart, MessageCircle } from "lucide-react";
+import { Check, ShoppingCart, MessageCircle, Info } from "lucide-react";
 import { useCart } from "@/hooks/use-cart";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 interface ProductCardProps {
   product: {
@@ -61,19 +69,65 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
           <Badge variant="secondary" className="bg-secondary text-secondary-foreground w-fit text-[10px] md:text-xs">{product.category || 'Geral'}</Badge>
           <span className="text-sm md:text-lg font-bold text-yellow-500">
-            R$ {Number(product.price).toFixed(2)}
+            {product.category === 'IPTV' ? 'A partir de R$ 30,00' : `R$ ${Number(product.price).toFixed(2)}`}
           </span>
         </div>
         <CardTitle className="mt-2 line-clamp-1 group-hover:text-yellow-500 transition-colors text-white text-sm md:text-lg">{product.name}</CardTitle>
-        <Button 
-          variant="outline" 
-          size="sm" 
-          className="mt-2 w-full md:w-fit gap-2 h-7 md:h-8 text-[10px] md:text-xs" 
-          onClick={handleSupportClick}
-        >
-          <MessageCircle className="h-3 w-3 md:h-3.5 md:w-3.5" />
-          Suporte
-        </Button>
+        
+        <div className="flex flex-col gap-2 mt-2">
+          {product.category === 'IPTV' && (
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button 
+                  variant="link" 
+                  className="p-0 h-auto text-yellow-500 text-[10px] md:text-xs justify-start hover:text-yellow-400"
+                >
+                  <Info className="h-3 w-3 mr-1" />
+                  Saiba mais sobre os preços aqui
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md bg-[#1a1a1a] border-yellow-500/20 text-white">
+                <DialogHeader>
+                  <DialogTitle className="text-yellow-500">Tabela de Preços - {product.name}</DialogTitle>
+                  <DialogDescription className="text-muted-foreground">
+                    Escolha o plano que melhor atende suas necessidades.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="grid gap-4 py-4">
+                  <div className="flex items-center justify-between p-3 rounded-lg bg-yellow-500/5 border border-yellow-500/10">
+                    <span className="font-medium">1 Tela</span>
+                    <span className="text-yellow-500 font-bold text-lg">R$ 30,00</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 rounded-lg bg-yellow-500/5 border border-yellow-500/10">
+                    <span className="font-medium">2 Telas</span>
+                    <span className="text-yellow-500 font-bold text-lg">R$ 45,00</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 rounded-lg bg-yellow-500/5 border border-yellow-500/10">
+                    <span className="font-medium">3 Telas</span>
+                    <span className="text-yellow-500 font-bold text-lg">R$ 50,00</span>
+                  </div>
+                </div>
+                <Button 
+                  className="w-full bg-yellow-500 hover:bg-yellow-600 text-black"
+                  onClick={handleSupportClick}
+                >
+                  <MessageCircle className="mr-2 h-4 w-4" />
+                  Contratar via WhatsApp
+                </Button>
+              </DialogContent>
+            </Dialog>
+          )}
+
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="w-full md:w-fit gap-2 h-7 md:h-8 text-[10px] md:text-xs" 
+            onClick={handleSupportClick}
+          >
+            <MessageCircle className="h-3 w-3 md:h-3.5 md:w-3.5" />
+            Suporte
+          </Button>
+        </div>
       </CardHeader>
       <CardContent className="flex-1 p-3 md:p-6 pt-0 md:pt-0">
         <p className="text-[10px] md:text-sm text-muted-foreground line-clamp-2 mb-2 md:mb-4">
