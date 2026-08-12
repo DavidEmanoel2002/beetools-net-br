@@ -26,10 +26,10 @@ export const Route = createFileRoute("/")({
   loader: ({ context }) => context.queryClient.ensureQueryData(productsQueryOptions),
   component: Index,
   head: () => ({
-    title: "Pluffy Tools - As Melhores Ferramentas Digitais",
+    title: "Bee Tools - As Melhores Ferramentas Digitais",
     meta: [
-      { name: "description", content: "Encontre as melhores ferramentas de SEO, Design e Marketing para o seu negócio digital na Pluffy Tools." },
-      { property: "og:title", content: "Pluffy Tools - Marketplace de Ferramentas Digitais" },
+      { name: "description", content: "Encontre as melhores ferramentas de SEO, Design e Marketing para o seu negócio digital na Bee Tools." },
+      { property: "og:title", content: "Bee Tools - Marketplace de Ferramentas Digitais" },
       { property: "og:description", content: "Aumente suas vendas com nossas ferramentas digitais exclusivas." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -59,7 +59,10 @@ function Index() {
         <section id="products" className="py-24">
           <div className="container">
             <div className="flex flex-col items-center justify-center text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Ferramentas Digitais</h2>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-white flex items-center gap-3">
+                <div className="h-10 w-1.5 bg-orange-500 rounded-full" />
+                Ferramentas Digitais
+              </h2>
               <p className="mt-4 text-muted-foreground max-w-2xl">
                 As melhores ferramentas para o seu fluxo de trabalho criativo e produtivo.
               </p>
@@ -74,7 +77,10 @@ function Index() {
             {iptv.length > 0 && (
               <>
                 <div className="flex flex-col items-center justify-center text-center mt-32 mb-16">
-                  <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">IPTV & Entretenimento</h2>
+                  <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-white flex items-center gap-3">
+                    <div className="h-10 w-1.5 bg-orange-500 rounded-full" />
+                    IPTV & Entretenimento
+                  </h2>
                   <p className="mt-4 text-muted-foreground max-w-2xl">
                     Sua dose diária de entretenimento com a melhor qualidade.
                   </p>

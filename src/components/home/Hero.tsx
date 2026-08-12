@@ -20,7 +20,7 @@ export function Hero() {
       <div className="container relative z-10">
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-8 flex justify-center">
-            <Badge className="px-4 py-1.5 border-orange-500/50 text-orange-500 bg-orange-500/10" variant="outline">
+            <Badge className="px-4 py-1.5 border-orange-500/50 text-orange-500 bg-orange-500/10 shadow-[0_0_15px_rgba(249,115,22,0.2)]" variant="outline">
               <span className="mr-2 inline-block h-2 w-2 rounded-full bg-orange-500 animate-pulse" />
               SUPORTE ONLINE
             </Badge>
