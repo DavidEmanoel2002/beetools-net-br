@@ -7,7 +7,17 @@ import { Badge } from "@/components/ui/badge";
 import beeLogo from "@/assets/bee-profile.jpeg.asset.json";
 import {
   Sheet,
-  ...
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+  SheetFooter,
+} from "@/components/ui/sheet";
+import { Input } from "@/components/ui/input";
+
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Separator } from "@/components/ui/separator";
+
 export function Header() {
   const { items, updateQuantity, removeItem, clearCart } = useCart();
   const { searchQuery, setSearchQuery } = useSearch();
