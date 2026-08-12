@@ -1,4 +1,4 @@
-import { Zap, Shield } from "lucide-react";
+import { Zap, Shield, RotateCcw } from "lucide-react";
 import { motion } from "framer-motion";
 
 const features = [
@@ -11,6 +11,11 @@ const features = [
     name: "Segurança Garantida",
     description: "Transações criptografadas e suporte das 9h às 23h para garantir sua tranquilidade.",
     icon: Shield,
+  },
+  {
+    name: "Garantia de 7 dias",
+    description: "Oferecemos garantia de satisfação de até 7 dias para todos os nossos produtos.",
+    icon: RotateCcw,
   },
 ];
 
@@ -30,7 +35,7 @@ export function Features() {
             Oferecemos a infraestrutura necessária para o sucesso do seu produto digital.
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 max-w-5xl mx-auto">
           {features.map((feature, i) => (
             <motion.div 
               key={feature.name} 
