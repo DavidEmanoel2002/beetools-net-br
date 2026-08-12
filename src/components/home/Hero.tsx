@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, Shield, BarChart3 } from "lucide-react";
-import { motion } from "framer-motion";
+import beeLogo from "@/assets/bee-logo.png.asset.json";
 
 export function Hero() {
   const containerVariants: any = {
@@ -47,7 +47,12 @@ export function Hero() {
           initial="hidden"
           animate="visible"
         >
-          <motion.div className="mb-8 flex justify-center" variants={itemVariants}>
+          <motion.div className="mb-8 flex flex-col items-center gap-6" variants={itemVariants}>
+            <img 
+              src={beeLogo.url} 
+              alt="Bee Tools Logo" 
+              className="h-24 md:h-32 w-auto object-contain animate-float"
+            />
             <Badge className="px-4 py-1.5 border-yellow-500/50 text-yellow-500 bg-yellow-500/10 shadow-[0_0_15px_rgba(254,240,138,0.2)]" variant="outline">
               <span className="mr-2 inline-block h-2 w-2 rounded-full bg-orange-500 animate-pulse" />
               SUPORTE ONLINE
