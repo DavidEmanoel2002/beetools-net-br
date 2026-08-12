@@ -4,7 +4,7 @@ export function Footer() {
       <div className="container py-12 md:py-16">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div className="col-span-2 md:col-span-1">
-            <span className="text-xl font-bold tracking-tight text-primary">Tools</span>
+            <span className="text-xl font-bold tracking-tight text-primary">Bee Tools</span>
             <p className="mt-4 text-sm text-muted-foreground">
               As melhores ferramentas digitais para impulsionar seu negócio online.
             </p>
@@ -35,7 +35,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Tools. Todos os direitos reservados.
+          © {new Date().getFullYear()} Bee Tools. Todos os direitos reservados.
         </div>
       </div>
     </footer>
