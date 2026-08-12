@@ -1,0 +1,5 @@
+INSERT INTO public.products (name, description, price, image_url, category, features)
+VALUES 
+('Netflix Premium', 'Acesso 4K Ultra HD com as melhores séries e filmes do mundo.', 19.90, 'https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg', 'IPTV', ARRAY['4K Ultra HD', 'Telas simultâneas', 'Download disponível']),
+('Spotify Premium', 'Música sem anúncios e modo offline para curtir em qualquer lugar.', 14.90, 'https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg', 'IPTV', ARRAY['Sem anúncios', 'Modo offline', 'Alta fidelidade sonora']),
+('HBO Max', 'O melhor do cinema e das séries da Warner Bros, DC e mais.', 17.90, 'https://upload.wikimedia.org/wikipedia/commons/c/ce/Max_logo.svg', 'IPTV', ARRAY['Exclusividades Max', 'Qualidade 4K', 'Perfis personalizados']);
