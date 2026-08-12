@@ -26,10 +26,10 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-orange-500/10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold tracking-tight text-yellow-500 drop-shadow-[0_0_8px_rgba(254,240,138,0.4)]">Bee Tools</span>
+            <span className="text-xl md:text-2xl font-bold tracking-tight text-yellow-500 drop-shadow-[0_0_8px_rgba(254,240,138,0.4)] whitespace-nowrap">Bee Tools</span>
           </Link>
         </div>
         
@@ -41,8 +41,8 @@ export function Header() {
               <Search className="absolute left-2.5 h-4 w-4 text-muted-foreground" />
               <Input
                 type="search"
-                placeholder="Pesquisar ferramentas..."
-                className="pl-9 h-9 w-[200px] lg:w-[300px] bg-muted/50 border-none focus-visible:ring-1 focus-visible:ring-primary"
+                placeholder="Pesquisar..."
+                className="pl-9 h-9 w-[150px] lg:w-[300px] bg-muted/50 border-none focus-visible:ring-1 focus-visible:ring-primary"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -55,14 +55,48 @@ export function Header() {
                 </button>
               )}
             </div>
-            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 transition-colors hover:text-primary">
+            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 transition-colors hover:text-primary whitespace-nowrap">
               <MessageCircle className="h-4 w-4" />
               Suporte
             </a>
           </div>
         </nav>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 md:gap-4">
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Search className="h-5 w-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="top" className="h-auto">
+                <div className="py-4 space-y-4">
+                  <SheetHeader>
+                    <SheetTitle>Pesquisar</SheetTitle>
+                  </SheetHeader>
+                  <div className="relative flex items-center">
+                    <Search className="absolute left-2.5 h-4 w-4 text-muted-foreground" />
+                    <Input
+                      type="search"
+                      placeholder="Pesquisar ferramentas..."
+                      className="pl-9 h-12 text-base bg-muted/50 border-none focus-visible:ring-1 focus-visible:ring-primary"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                    />
+                    {searchQuery && (
+                      <button 
+                        onClick={() => setSearchQuery('')}
+                        className="absolute right-3 hover:text-primary transition-colors"
+                      >
+                        <X className="h-5 w-5" />
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="relative">
@@ -147,9 +181,26 @@ export function Header() {
             </SheetContent>
           </Sheet>
           
-          <Button variant="ghost" size="icon" className="md:hidden">
-            <Menu className="h-5 w-5" />
-          </Button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="md:hidden">
+                <Menu className="h-5 w-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px]">
+              <SheetHeader className="mb-8">
+                <SheetTitle className="text-left">Menu</SheetTitle>
+              </SheetHeader>
+              <nav className="flex flex-col gap-6 text-lg font-medium">
+                <Link to="/" className="transition-colors hover:text-primary">Início</Link>
+                <a href="#products" className="transition-colors hover:text-primary">Ferramentas</a>
+                <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 transition-colors hover:text-primary">
+                  <MessageCircle className="h-5 w-5" />
+                  Suporte WhatsApp
+                </a>
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
