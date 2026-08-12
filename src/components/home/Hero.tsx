@@ -35,7 +35,11 @@ export function Hero() {
           </p>
           
           <div className="mt-12 flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="h-14 px-8 bg-yellow-500 hover:bg-yellow-600 text-black font-bold rounded-xl transition-all hover:scale-105">
+            <Button 
+              size="lg" 
+              className="h-14 px-8 bg-yellow-500 hover:bg-yellow-600 text-black font-bold rounded-xl transition-all hover:scale-105"
+              onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Ver produtos <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
