@@ -25,11 +25,11 @@ export function Header() {
 
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-orange-500/10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold tracking-tight text-primary">Bee Tools</span>
+            <span className="text-2xl font-bold tracking-tight text-orange-500 drop-shadow-[0_0_8px_rgba(249,115,22,0.4)]">Bee Tools</span>
           </Link>
         </div>
         
