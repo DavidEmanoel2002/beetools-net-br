@@ -30,7 +30,7 @@ export function ProductCard({ product }: ProductCardProps) {
   };
 
   return (
-    <Card className="flex flex-col overflow-hidden transition-all hover:shadow-2xl hover:shadow-orange-500/10 bg-orange-500/5 border-orange-500/10 hover:border-orange-500/30 backdrop-blur-sm group">
+    <Card className="flex flex-col overflow-hidden transition-all hover:shadow-2xl hover:shadow-yellow-500/10 bg-yellow-500/5 border-yellow-500/10 hover:border-yellow-500/30 backdrop-blur-sm group">
       <div className="aspect-video w-full overflow-hidden bg-white flex items-center justify-center p-4">
         {product.image_url ? (
           <img
@@ -52,11 +52,11 @@ export function ProductCard({ product }: ProductCardProps) {
       <CardHeader>
         <div className="flex items-center justify-between">
           <Badge variant="secondary" className="bg-secondary text-secondary-foreground">{product.category || 'Geral'}</Badge>
-          <span className="text-lg font-bold text-orange-500">
+          <span className="text-lg font-bold text-yellow-500">
             R$ {Number(product.price).toFixed(2)}
           </span>
         </div>
-        <CardTitle className="mt-2 line-clamp-1 group-hover:text-orange-500 transition-colors text-white">{product.name}</CardTitle>
+        <CardTitle className="mt-2 line-clamp-1 group-hover:text-yellow-500 transition-colors text-white">{product.name}</CardTitle>
         <Button 
           variant="outline" 
           size="sm" 

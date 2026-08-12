@@ -13,21 +13,21 @@ export function Hero() {
             backgroundSize: '56px 100px'
           }} 
         />
-        <div className="absolute right-0 top-0 h-[600px] w-[600px] -translate-y-1/2 translate-x-1/2 rounded-full bg-orange-500/10 blur-[120px]" />
+        <div className="absolute right-0 top-0 h-[600px] w-[600px] -translate-y-1/2 translate-x-1/2 rounded-full bg-yellow-500/10 blur-[120px]" />
         <div className="absolute left-0 bottom-0 h-[400px] w-[400px] translate-y-1/2 -translate-x-1/2 rounded-full bg-orange-600/5 blur-[100px]" />
       </div>
 
       <div className="container relative z-10">
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-8 flex justify-center">
-            <Badge className="px-4 py-1.5 border-orange-500/50 text-orange-500 bg-orange-500/10 shadow-[0_0_15px_rgba(249,115,22,0.2)]" variant="outline">
+            <Badge className="px-4 py-1.5 border-yellow-500/50 text-yellow-500 bg-yellow-500/10 shadow-[0_0_15px_rgba(254,240,138,0.2)]" variant="outline">
               <span className="mr-2 inline-block h-2 w-2 rounded-full bg-orange-500 animate-pulse" />
               SUPORTE ONLINE
             </Badge>
           </div>
           
           <h1 className="text-5xl font-extrabold tracking-tight sm:text-7xl text-white mb-6">
-            Seja Bem-vindo à <span className="text-orange-500">Bee Tools</span>
+            Seja Bem-vindo à <span className="text-yellow-500">Bee Tools</span>
           </h1>
           
           <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400">
@@ -35,7 +35,7 @@ export function Hero() {
           </p>
           
           <div className="mt-12 flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="h-14 px-8 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl transition-all hover:scale-105">
+            <Button size="lg" className="h-14 px-8 bg-yellow-500 hover:bg-yellow-600 text-black font-bold rounded-xl transition-all hover:scale-105">
               Ver produtos <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
@@ -47,9 +47,9 @@ export function Hero() {
               { label: "RÁPIDO", sub: "ENTREGA AUTOMÁTICA" },
               { label: "100%", sub: "COMPRA SEGURA" }
             ].map((stat, i) => (
-              <div key={i} className="flex flex-col items-center justify-center rounded-2xl border border-orange-500/10 bg-orange-500/5 p-6 backdrop-blur-sm hover:border-orange-500/30 transition-colors">
+              <div key={i} className="flex flex-col items-center justify-center rounded-2xl border border-yellow-500/10 bg-yellow-500/5 p-6 backdrop-blur-sm hover:border-yellow-500/30 transition-colors">
                 <span className="text-2xl font-bold text-white">{stat.label}</span>
-                <span className="mt-1 text-xs font-bold text-orange-500 tracking-wider">{stat.sub}</span>
+                <span className="mt-1 text-xs font-bold text-yellow-500 tracking-wider">{stat.sub}</span>
               </div>
             ))}
           </div>

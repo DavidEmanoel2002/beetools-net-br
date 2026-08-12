@@ -29,7 +29,7 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold tracking-tight text-orange-500 drop-shadow-[0_0_8px_rgba(249,115,22,0.4)]">Bee Tools</span>
+            <span className="text-2xl font-bold tracking-tight text-yellow-500 drop-shadow-[0_0_8px_rgba(254,240,138,0.4)]">Bee Tools</span>
           </Link>
         </div>
         

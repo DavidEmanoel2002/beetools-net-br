@@ -60,7 +60,7 @@ function Index() {
           <div className="container">
             <div className="flex flex-col items-center justify-center text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-white flex items-center gap-3">
-                <div className="h-10 w-1.5 bg-orange-500 rounded-full" />
+                <div className="h-10 w-1.5 bg-yellow-500 rounded-full" />
                 Ferramentas Digitais
               </h2>
               <p className="mt-4 text-muted-foreground max-w-2xl">
@@ -78,7 +78,7 @@ function Index() {
               <>
                 <div className="flex flex-col items-center justify-center text-center mt-32 mb-16">
                   <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-white flex items-center gap-3">
-                    <div className="h-10 w-1.5 bg-orange-500 rounded-full" />
+                    <div className="h-10 w-1.5 bg-yellow-500 rounded-full" />
                     IPTV & Entretenimento
                   </h2>
                   <p className="mt-4 text-muted-foreground max-w-2xl">
