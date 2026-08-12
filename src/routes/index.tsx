@@ -7,6 +7,7 @@ import { Hero } from "@/components/home/Hero";
 import { Features } from "@/components/home/Features";
 import { ProductCard } from "@/components/products/ProductCard";
 import { useSearch } from "@/hooks/use-search";
+import { motion } from "framer-motion";
 
 
 const productsQueryOptions = {
@@ -58,7 +59,13 @@ function Index() {
         
         <section id="products" className="py-16 md:py-24">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center text-center mb-16">
+            <motion.div 
+              className="flex flex-col items-center justify-center text-center mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
               <h2 className="text-2xl font-bold tracking-tight sm:text-4xl text-white flex items-center gap-3">
                 <div className="h-8 md:h-10 w-1.5 bg-yellow-500 rounded-full" />
                 Ferramentas Digitais
@@ -66,7 +73,7 @@ function Index() {
               <p className="mt-4 text-muted-foreground max-w-2xl">
                 As melhores ferramentas para o seu fluxo de trabalho criativo e produtivo.
               </p>
-            </div>
+            </motion.div>
             
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {tools.map((product) => (
@@ -76,7 +83,13 @@ function Index() {
 
             {iptv.length > 0 && (
               <>
-                <div className="flex flex-col items-center justify-center text-center mt-32 mb-16">
+                <motion.div 
+                  className="flex flex-col items-center justify-center text-center mt-32 mb-16"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
                   <h2 className="text-2xl font-bold tracking-tight sm:text-4xl text-white flex items-center gap-3">
                     <div className="h-8 md:h-10 w-1.5 bg-yellow-500 rounded-full" />
                     IPTV & Entretenimento
@@ -84,7 +97,7 @@ function Index() {
                   <p className="mt-4 text-muted-foreground max-w-2xl">
                     Sua dose diária de entretenimento com a melhor qualidade.
                   </p>
-                </div>
+                </motion.div>
                 
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                   {iptv.map((product) => (

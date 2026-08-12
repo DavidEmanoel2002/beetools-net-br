@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Check, ShoppingCart, MessageCircle } from "lucide-react";
 import { useCart } from "@/hooks/use-cart";
 import { toast } from "sonner";
+import { motion } from "framer-motion";
 
 interface ProductCardProps {
   product: {
@@ -30,7 +31,14 @@ export function ProductCard({ product }: ProductCardProps) {
   };
 
   return (
-    <Card className="flex flex-col overflow-hidden transition-all hover:shadow-2xl hover:shadow-yellow-500/10 bg-yellow-500/5 border-yellow-500/10 hover:border-yellow-500/30 backdrop-blur-sm group">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.5 }}
+      whileHover={{ y: -8 }}
+    >
+      <Card className="flex flex-col h-full overflow-hidden transition-all hover:shadow-2xl hover:shadow-yellow-500/10 bg-yellow-500/5 border-yellow-500/10 hover:border-yellow-500/30 backdrop-blur-sm group">
       <div className="aspect-video w-full overflow-hidden bg-white flex items-center justify-center p-4">
         {product.image_url ? (
           <img
@@ -86,6 +94,7 @@ export function ProductCard({ product }: ProductCardProps) {
           Adicionar ao Carrinho
         </Button>
       </CardFooter>
-    </Card>
+      </Card>
+    </motion.div>
   );
 }
