@@ -4,19 +4,10 @@ import { ShoppingCart, Menu, MessageCircle, Trash2, Plus, Minus, Search, X } fro
 import { useCart, type CartItem } from "@/hooks/use-cart";
 import { useSearch } from "@/hooks/use-search";
 import { Badge } from "@/components/ui/badge";
+import beeLogo from "@/assets/bee-profile.jpeg.asset.json";
 import {
   Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-  SheetFooter,
-} from "@/components/ui/sheet";
-import { Input } from "@/components/ui/input";
-
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Separator } from "@/components/ui/separator";
-
+  ...
 export function Header() {
   const { items, updateQuantity, removeItem, clearCart } = useCart();
   const { searchQuery, setSearchQuery } = useSearch();
@@ -29,6 +20,9 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center space-x-2">
+            <div className="h-8 w-8 rounded-full overflow-hidden border border-yellow-500/20 bg-yellow-500/10 flex items-center justify-center">
+              <img src={beeLogo.url} alt="Bee Tools Logo" className="h-full w-full object-cover" />
+            </div>
             <span className="text-xl md:text-2xl font-bold tracking-tight text-yellow-500 drop-shadow-[0_0_8px_rgba(254,240,138,0.4)] whitespace-nowrap">Bee Tools</span>
           </Link>
         </div>
