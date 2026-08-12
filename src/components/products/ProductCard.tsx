@@ -118,15 +118,17 @@ export function ProductCard({ product }: ProductCardProps) {
             </Dialog>
           )}
 
-          <Button 
-            variant="outline" 
-            size="sm" 
-            className="w-full md:w-fit gap-2 h-7 md:h-8 text-[10px] md:text-xs" 
-            onClick={handleSupportClick}
-          >
-            <MessageCircle className="h-3 w-3 md:h-3.5 md:w-3.5" />
-            Suporte
-          </Button>
+          {product.category === 'IPTV' && (
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="w-full md:w-fit gap-2 h-7 md:h-8 text-[10px] md:text-xs" 
+              onClick={handleSupportClick}
+            >
+              <MessageCircle className="h-3 w-3 md:h-3.5 md:w-3.5" />
+              Suporte
+            </Button>
+          )}
         </div>
       </CardHeader>
       <CardContent className="flex-1 p-3 md:p-6 pt-0 md:pt-0">
