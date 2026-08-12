@@ -53,7 +53,7 @@ export function Hero() {
             <img 
               src={beeLogo.url} 
               alt="Bee Tools Logo" 
-              className="h-24 md:h-32 w-auto object-contain animate-float"
+              className="h-24 md:h-32 w-auto object-contain animate-float mix-blend-lighten"
             />
             <Badge className="px-4 py-1.5 border-yellow-500/50 text-yellow-500 bg-yellow-500/10 shadow-[0_0_15px_rgba(254,240,138,0.2)]" variant="outline">
               <span className="mr-2 inline-block h-2 w-2 rounded-full bg-orange-500 animate-pulse" />
