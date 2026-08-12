@@ -144,3 +144,7 @@
     background-attachment: fixed;
   }
 }
+
+#lovable-badge {
+  display: none !important;
+}
