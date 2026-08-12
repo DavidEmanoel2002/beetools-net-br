@@ -59,7 +59,7 @@ export function Header() {
                 </button>
               )}
             </div>
-            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 transition-colors hover:text-primary whitespace-nowrap">
+            <a href="https://wa.me/558896261696?text=Ol%C3%A1%2C+tenho+interesse+nos+produtos+da+Bee+Tools.+Poderia+me+passar+mais+informa%C3%A7%C3%B5es%3F&utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 transition-colors hover:text-primary whitespace-nowrap">
               <MessageCircle className="h-4 w-4" />
               Suporte
             </a>
@@ -198,7 +198,7 @@ export function Header() {
               <nav className="flex flex-col gap-6 text-lg font-medium">
                 <Link to="/" className="transition-colors hover:text-primary">Início</Link>
                 <a href="#products" className="transition-colors hover:text-primary">Ferramentas</a>
-                <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 transition-colors hover:text-primary">
+                <a href="https://wa.me/558896261696?text=Ol%C3%A1%2C+tenho+interesse+nos+produtos+da+Bee+Tools.+Poderia+me+passar+mais+informa%C3%A7%C3%B5es%3F&utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 transition-colors hover:text-primary">
                   <MessageCircle className="h-5 w-5" />
                   Suporte WhatsApp
                 </a>
