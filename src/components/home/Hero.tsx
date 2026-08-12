@@ -3,7 +3,7 @@ import { ArrowRight, Zap, Shield, BarChart3 } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden py-24 lg:py-36 bg-background">
+    <section className="relative overflow-hidden py-16 md:py-24 lg:py-36 bg-background">
       {/* Background Grid and Glow */}
       <div className="absolute inset-0 z-0">
         <div 
@@ -26,11 +26,11 @@ export function Hero() {
             </Badge>
           </div>
           
-          <h1 className="text-5xl font-extrabold tracking-tight sm:text-7xl text-white mb-6">
+          <h1 className="text-4xl font-extrabold tracking-tight sm:text-7xl text-white mb-6">
             Seja Bem-vindo à <span className="text-yellow-500">Bee Tools</span>
           </h1>
           
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400">
+          <p className="mx-auto mt-6 max-w-2xl text-base md:text-lg text-gray-400 px-4">
             Aqui você encontra tudo para deixar sua experiência de jogo ainda melhor. Compra rápida, segura e 100% digital. Explore e aproveite!
           </p>
           
@@ -45,15 +45,15 @@ export function Hero() {
           </div>
 
           {/* Stats/Features Row */}
-          <div className="mt-20 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div className="mt-20 grid grid-cols-1 gap-4 sm:grid-cols-3 px-4">
             {[
               { label: "4.9/5", sub: "AVALIAÇÕES" },
               { label: "RÁPIDO", sub: "ENTREGA AUTOMÁTICA" },
               { label: "100%", sub: "COMPRA SEGURA" }
             ].map((stat, i) => (
-              <div key={i} className="flex flex-col items-center justify-center rounded-2xl border border-yellow-500/10 bg-yellow-500/5 p-6 backdrop-blur-sm hover:border-yellow-500/30 transition-colors">
-                <span className="text-2xl font-bold text-white">{stat.label}</span>
-                <span className="mt-1 text-xs font-bold text-yellow-500 tracking-wider">{stat.sub}</span>
+              <div key={i} className="flex flex-col items-center justify-center rounded-2xl border border-yellow-500/10 bg-yellow-500/5 p-4 md:p-6 backdrop-blur-sm hover:border-yellow-500/30 transition-colors">
+                <span className="text-xl md:text-2xl font-bold text-white">{stat.label}</span>
+                <span className="mt-1 text-[10px] md:text-xs font-bold text-yellow-500 tracking-wider">{stat.sub}</span>
               </div>
             ))}
           </div>
