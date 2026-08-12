@@ -9,7 +9,7 @@ const features = [
   },
   {
     name: "Segurança Garantida",
-    description: "Transações criptografadas e suporte 24/7 para garantir sua tranquilidade.",
+    description: "Transações criptografadas e suporte das 9h às 23h para garantir sua tranquilidade.",
     icon: Shield,
   },
 ];
