@@ -1,26 +1,16 @@
-import { Zap, Shield, BarChart3, Globe } from "lucide-react";
+import { Zap, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 
 const features = [
   {
-    name: "Entrega Instantânea",
-    description: "Receba suas ferramentas digitais imediatamente após a confirmação do pagamento.",
+    name: "Entrega em até 48h",
+    description: "Receba suas ferramentas digitais em até 48 horas após a confirmação do pagamento.",
     icon: Zap,
   },
   {
     name: "Segurança Garantida",
     description: "Transações criptografadas e suporte 24/7 para garantir sua tranquilidade.",
     icon: Shield,
-  },
-  {
-    name: "Analytics Completo",
-    description: "Acompanhe o desempenho das suas ferramentas com dashboards integrados.",
-    icon: BarChart3,
-  },
-  {
-    name: "Alcance Global",
-    description: "Venda para clientes em qualquer lugar do mundo com suporte a múltiplas moedas.",
-    icon: Globe,
   },
 ];
 
