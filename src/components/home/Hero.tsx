@@ -3,7 +3,7 @@ import { ArrowRight, Zap, Shield, BarChart3 } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden py-24 lg:py-36 bg-black">
+    <section className="relative overflow-hidden py-24 lg:py-36 bg-background">
       {/* Background Grid and Glow */}
       <div className="absolute inset-0 z-0">
         <div 
@@ -13,7 +13,7 @@ export function Hero() {
             backgroundSize: '40px 40px'
           }} 
         />
-        <div className="absolute right-0 top-0 h-[600px] w-[600px] -translate-y-1/2 translate-x-1/2 rounded-full bg-orange-600/20 blur-[120px]" />
+        <div className="absolute right-0 top-0 h-[600px] w-[600px] -translate-y-1/2 translate-x-1/2 rounded-full bg-orange-600/5 blur-[120px]" />
       </div>
 
       <div className="container relative z-10">
