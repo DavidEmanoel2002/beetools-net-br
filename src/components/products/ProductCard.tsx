@@ -57,26 +57,26 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
         )}
       </div>
-      <CardHeader>
-        <div className="flex items-center justify-between">
-          <Badge variant="secondary" className="bg-secondary text-secondary-foreground">{product.category || 'Geral'}</Badge>
-          <span className="text-lg font-bold text-yellow-500">
+      <CardHeader className="p-3 md:p-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
+          <Badge variant="secondary" className="bg-secondary text-secondary-foreground w-fit text-[10px] md:text-xs">{product.category || 'Geral'}</Badge>
+          <span className="text-sm md:text-lg font-bold text-yellow-500">
             R$ {Number(product.price).toFixed(2)}
           </span>
         </div>
-        <CardTitle className="mt-2 line-clamp-1 group-hover:text-yellow-500 transition-colors text-white">{product.name}</CardTitle>
+        <CardTitle className="mt-2 line-clamp-1 group-hover:text-yellow-500 transition-colors text-white text-sm md:text-lg">{product.name}</CardTitle>
         <Button 
           variant="outline" 
           size="sm" 
-          className="mt-2 w-fit gap-2 h-8 text-xs" 
+          className="mt-2 w-full md:w-fit gap-2 h-7 md:h-8 text-[10px] md:text-xs" 
           onClick={handleSupportClick}
         >
-          <MessageCircle className="h-3.5 w-3.5" />
+          <MessageCircle className="h-3 w-3 md:h-3.5 md:w-3.5" />
           Suporte
         </Button>
       </CardHeader>
-      <CardContent className="flex-1">
-        <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
+      <CardContent className="flex-1 p-3 md:p-6 pt-0 md:pt-0">
+        <p className="text-[10px] md:text-sm text-muted-foreground line-clamp-2 mb-2 md:mb-4">
           {product.description}
         </p>
         <ul className="space-y-2">
@@ -88,10 +88,11 @@ export function ProductCard({ product }: ProductCardProps) {
           ))}
         </ul>
       </CardContent>
-      <CardFooter>
-        <Button onClick={handleAddToCart} className="w-full gap-2">
-          <ShoppingCart className="h-4 w-4" />
-          Adicionar ao Carrinho
+      <CardFooter className="p-3 md:p-6 pt-0 md:pt-0">
+        <Button onClick={handleAddToCart} className="w-full gap-2 h-8 md:h-10 text-[10px] md:text-sm">
+          <ShoppingCart className="h-3 w-3 md:h-4 md:w-4" />
+          <span className="hidden xs:inline">Adicionar</span>
+          <span className="xs:hidden">Add</span>
         </Button>
       </CardFooter>
       </Card>
