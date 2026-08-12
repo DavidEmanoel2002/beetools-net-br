@@ -31,7 +31,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center space-x-2">
             <div className="h-8 w-8 rounded-full overflow-hidden border border-yellow-500/20 bg-yellow-500/10 flex items-center justify-center">
-              <img src={beeLogo.url} alt="Bee Tools Logo" className="h-full w-full object-cover" />
+              <img src={beeLogo.url} alt="Bee Tools Logo" className="h-full w-full object-cover mix-blend-lighten" />
             </div>
             <span className="text-xl md:text-2xl font-bold tracking-tight text-yellow-500 drop-shadow-[0_0_8px_rgba(254,240,138,0.4)] whitespace-nowrap">Bee Tools</span>
           </Link>
