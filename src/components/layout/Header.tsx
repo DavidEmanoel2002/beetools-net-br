@@ -29,7 +29,7 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold tracking-tight text-primary">Pluffy Tools</span>
+            <span className="text-2xl font-bold tracking-tight text-primary">Tools</span>
           </Link>
         </div>
         
