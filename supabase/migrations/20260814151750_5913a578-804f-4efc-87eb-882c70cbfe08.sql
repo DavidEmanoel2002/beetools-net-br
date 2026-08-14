@@ -1,0 +1,1 @@
+UPDATE public.products SET price = 18, updated_at = now() WHERE LOWER(name) LIKE '%spotify%';
