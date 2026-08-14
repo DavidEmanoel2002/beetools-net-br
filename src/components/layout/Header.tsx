@@ -177,7 +177,21 @@ export function Header() {
                     <span className="text-xl font-bold text-primary">R$ {total.toFixed(2)}</span>
                   </div>
                   <SheetFooter className="flex-col gap-2 sm:flex-col">
-                    <Button className="w-full py-6 text-base font-bold">Finalizar Compra</Button>
+                    <Button 
+                      className="w-full py-6 text-base font-bold"
+                      onClick={() => {
+                        const hasCanva = items.some(item => item.name.toLowerCase().includes('canva'));
+                        if (hasCanva) {
+                          window.open('https://wa.me/558896261696?text=Ol%C3%A1%2C+acabei+de+escolher+meu+plano+do+Canva+na+Bee+Tools+e+gostaria+de+finalizar+a+compra.', '_blank');
+                        } else {
+                          // Default checkout link for other products
+                          const message = `Olá, gostaria de finalizar a compra dos seguintes itens: ${items.map(i => `${i.quantity}x ${i.name}`).join(', ')}. Total: R$ ${total.toFixed(2)}`;
+                          window.open(`https://wa.me/558896261696?text=${encodeURIComponent(message)}`, '_blank');
+                        }
+                      }}
+                    >
+                      Finalizar Compra
+                    </Button>
                     <Button variant="outline" className="w-full" onClick={clearCart}>Limpar Carrinho</Button>
                   </SheetFooter>
                 </div>
