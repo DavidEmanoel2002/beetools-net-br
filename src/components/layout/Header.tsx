@@ -182,11 +182,14 @@ export function Header() {
                       onClick={() => {
                         const hasCanva = items.some(item => item.name.toLowerCase().includes('canva'));
                         const hasCapcut = items.some(item => item.name.toLowerCase().includes('capcut'));
+                        const hasEnvato2Meses = items.some(item => item.name.toLowerCase().includes('envato elements (2 meses)'));
                         
                         if (hasCanva) {
                           window.open('https://pay.kirvano.com/938feedf-3de6-4860-9058-6fb62fb86e44', '_blank');
                         } else if (hasCapcut) {
                           window.open('https://pay.kirvano.com/c42d9a91-6ffe-4d9a-a091-ffa597859ad8', '_blank');
+                        } else if (hasEnvato2Meses) {
+                          window.open('https://pay.kirvano.com/6bf0f6a8-4abc-485a-8742-578fa5a6cb84', '_blank');
                         } else {
                           // Default checkout link for other products
                           const message = `Olá, gostaria de finalizar a compra dos seguintes itens: ${items.map(i => `${i.quantity}x ${i.name}`).join(', ')}. Total: R$ ${total.toFixed(2)}`;
