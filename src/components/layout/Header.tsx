@@ -184,6 +184,7 @@ export function Header() {
                         const hasCapcut = items.some(item => item.name.toLowerCase().includes('capcut'));
                         const hasEnvato2Meses = items.some(item => item.name.toLowerCase().includes('envato elements (2 meses)'));
                         const hasEnvato3Meses = items.some(item => item.name.toLowerCase().includes('envato elements (3 meses)'));
+                        const hasFreepik = items.some(item => item.name.toLowerCase().includes('freepik'));
                         
                         if (hasCanva) {
                           window.open('https://pay.kirvano.com/938feedf-3de6-4860-9058-6fb62fb86e44', '_blank');
@@ -193,6 +194,8 @@ export function Header() {
                           window.open('https://pay.kirvano.com/6bf0f6a8-4abc-485a-8742-578fa5a6cb84', '_blank');
                         } else if (hasEnvato3Meses) {
                           window.open('https://pay.kirvano.com/630c1a90-3cfd-477b-9f4c-0ace9eda3cfa', '_blank');
+                        } else if (hasFreepik) {
+                          window.open('https://pay.kirvano.com/de06653e-b03c-48cd-89e1-31cda242efec', '_blank');
                         } else {
                           // Default checkout link for other products
                           const message = `Olá, gostaria de finalizar a compra dos seguintes itens: ${items.map(i => `${i.quantity}x ${i.name}`).join(', ')}. Total: R$ ${total.toFixed(2)}`;
