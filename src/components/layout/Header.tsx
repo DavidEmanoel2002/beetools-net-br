@@ -182,7 +182,7 @@ export function Header() {
                       onClick={() => {
                         const hasCanva = items.some(item => item.name.toLowerCase().includes('canva'));
                         if (hasCanva) {
-                          window.open('https://wa.me/558896261696?text=Ol%C3%A1%2C+acabei+de+escolher+meu+plano+do+Canva+na+Bee+Tools+e+gostaria+de+finalizar+a+compra.', '_blank');
+                          window.open('https://pay.kirvano.com/938feedf-3de6-4860-9058-6fb62fb86e44', '_blank');
                         } else {
                           // Default checkout link for other products
                           const message = `Olá, gostaria de finalizar a compra dos seguintes itens: ${items.map(i => `${i.quantity}x ${i.name}`).join(', ')}. Total: R$ ${total.toFixed(2)}`;
