@@ -1,0 +1,1 @@
+UPDATE public.products SET price = 18.00 WHERE name = 'Spotify Premium';
