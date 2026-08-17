@@ -198,7 +198,10 @@ export function Header() {
                           window.open('https://pay.kirvano.com/630c1a90-3cfd-477b-9f4c-0ace9eda3cfa', '_blank');
                         } else if (hasFreepik) {
                           window.open('https://pay.kirvano.com/de06653e-b03c-48cd-89e1-31cda242efec', '_blank');
+                        } else if (hasGemini) {
+                          window.open('https://pay.kirvano.com/97c06d62-658c-4b45-87e1-e1ecbc4d4cea', '_blank');
                         } else {
+
                           // Default checkout link for other products
                           const message = `Olá, gostaria de finalizar a compra dos seguintes itens: ${items.map(i => `${i.quantity}x ${i.name}`).join(', ')}. Total: R$ ${total.toFixed(2)}`;
                           window.open(`https://wa.me/558896261696?text=${encodeURIComponent(message)}`, '_blank');
