@@ -187,7 +187,6 @@ export function Header() {
                         const hasFreepik = items.some(item => item.name.toLowerCase().includes('freepik'));
                         const hasGemini = items.some(item => item.name.toLowerCase().includes('gemini'));
 
-                        
                         if (hasCanva) {
                           window.open('https://pay.kirvano.com/938feedf-3de6-4860-9058-6fb62fb86e44', '_blank');
                         } else if (hasCapcut) {
