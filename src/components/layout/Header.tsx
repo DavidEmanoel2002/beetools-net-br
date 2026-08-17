@@ -185,6 +185,8 @@ export function Header() {
                         const hasEnvato2Meses = items.some(item => item.name.toLowerCase().includes('envato elements (2 meses)'));
                         const hasEnvato3Meses = items.some(item => item.name.toLowerCase().includes('envato elements (3 meses)'));
                         const hasFreepik = items.some(item => item.name.toLowerCase().includes('freepik'));
+                        const hasGemini = items.some(item => item.name.toLowerCase().includes('gemini'));
+
                         
                         if (hasCanva) {
                           window.open('https://pay.kirvano.com/938feedf-3de6-4860-9058-6fb62fb86e44', '_blank');
