@@ -186,6 +186,7 @@ export function Header() {
                         const hasEnvato3Meses = items.some(item => item.name.toLowerCase().includes('envato elements (3 meses)'));
                         const hasFreepik = items.some(item => item.name.toLowerCase().includes('freepik'));
                         const hasGemini = items.some(item => item.name.toLowerCase().includes('gemini'));
+                        const hasNetflix = items.some(item => item.name.toLowerCase().includes('netflix'));
 
                         if (hasCanva) {
                           window.open('https://pay.kirvano.com/938feedf-3de6-4860-9058-6fb62fb86e44', '_blank');
@@ -199,6 +200,8 @@ export function Header() {
                           window.open('https://pay.kirvano.com/de06653e-b03c-48cd-89e1-31cda242efec', '_blank');
                         } else if (hasGemini) {
                           window.open('https://pay.kirvano.com/97c06d62-658c-4b45-87e1-e1ecbc4d4cea', '_blank');
+                        } else if (hasNetflix) {
+                          window.open('https://pay.kirvano.com/a2fb8599-2286-4305-871f-b5fd589044c9', '_blank');
                         } else {
 
                           // Default checkout link for other products
