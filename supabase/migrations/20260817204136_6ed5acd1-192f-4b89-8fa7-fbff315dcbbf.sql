@@ -1,0 +1,3 @@
+UPDATE public.products 
+SET description = 'Tenha acesso a uma grande variedade de filmes, séries, documentários e produções exclusivas em um só lugar. Aproveite conteúdos de alta qualidade, grandes lançamentos e sucessos da HBO, além de opções para todos os gostos. Assista quando e onde quiser, em diferentes dispositivos, e tenha sempre algo novo para assistir.'
+WHERE id = 'd2047740-061b-49cf-a5b0-69b179d5688a';
