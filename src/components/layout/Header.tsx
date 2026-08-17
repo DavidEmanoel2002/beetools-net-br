@@ -187,6 +187,7 @@ export function Header() {
                         const hasFreepik = items.some(item => item.name.toLowerCase().includes('freepik'));
                         const hasGemini = items.some(item => item.name.toLowerCase().includes('gemini'));
                         const hasNetflix = items.some(item => item.name.toLowerCase().includes('netflix'));
+                        const hasHBO = items.some(item => item.name.toLowerCase().includes('hbo max'));
 
                         if (hasCanva) {
                           window.open('https://pay.kirvano.com/938feedf-3de6-4860-9058-6fb62fb86e44', '_blank');
@@ -202,6 +203,8 @@ export function Header() {
                           window.open('https://pay.kirvano.com/97c06d62-658c-4b45-87e1-e1ecbc4d4cea', '_blank');
                         } else if (hasNetflix) {
                           window.open('https://pay.kirvano.com/a2fb8599-2286-4305-871f-b5fd589044c9', '_blank');
+                        } else if (hasHBO) {
+                          window.open('https://pay.kirvano.com/eb140e78-7ced-4926-bd93-1ad48543a4e7', '_blank');
                         } else {
 
                           // Default checkout link for other products
