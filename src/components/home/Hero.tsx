@@ -72,7 +72,7 @@ export function Hero() {
             className="mx-auto mt-6 max-w-2xl text-base md:text-lg text-gray-400 px-4"
             variants={itemVariants}
           >
-            Aqui você encontra tudo para deixar sua experiência de jogo ainda melhor. Compra rápida, segura e 100% digital. Explore e aproveite!
+            como deixar meu site ativo com o meu dominio
           </motion.p>
           
           <motion.div className="mt-12 flex flex-wrap justify-center gap-4" variants={itemVariants}>
