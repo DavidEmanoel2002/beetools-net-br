@@ -72,7 +72,7 @@ export function Hero() {
             className="mx-auto mt-6 max-w-2xl text-base md:text-lg text-gray-400 px-4"
             variants={itemVariants}
           >
-            tire essa frase que foi adcionado
+            como deixar meu site ativo com o meu dominio
           </motion.p>
           
           <motion.div className="mt-12 flex flex-wrap justify-center gap-4" variants={itemVariants}>
