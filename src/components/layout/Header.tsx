@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ShoppingCart, Menu, MessageCircle, Trash2, Plus, Minus, Search, X } from "lucide-react";
 import { useCart, type CartItem } from "@/hooks/use-cart";
 import { useSearch } from "@/hooks/use-search";
+import { getPaymentLink } from "@/lib/payment-links";
 import { Badge } from "@/components/ui/badge";
 import beeLogo from "@/assets/bee-profile.jpeg.asset.json";
 import {
