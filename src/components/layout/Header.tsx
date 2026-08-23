@@ -181,7 +181,7 @@ export function Header() {
                     <Button 
                       className="w-full py-6 text-base font-bold"
                       onClick={() => {
-                        if (items.length === 1) {
+                        if (items.length === 1 && items[0]) {
                           window.open(getPaymentLink(items[0]), '_blank');
                         } else {
                           const message = `Olá, gostaria de finalizar a compra dos seguintes itens: ${items.map(i => `${i.quantity}x ${i.name}`).join(', ')}. Total: R$ ${total.toFixed(2)}`;
