@@ -65,7 +65,11 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
           <Badge variant="secondary" className="bg-secondary text-secondary-foreground w-fit text-[10px] md:text-xs">{product.category || 'Geral'}</Badge>
           <span className="text-sm md:text-lg font-bold text-yellow-500">
-            {product.category === 'IPTV' ? 'A partir de R$ 30,00' : `R$ ${Number(product.price).toFixed(2)}`}
+            {product.category === 'IPTV' 
+              ? 'A partir de R$ 30,00' 
+              : product.name.toLowerCase().includes('spotify') 
+                ? 'A partir de R$ 18,00' 
+                : `R$ ${Number(product.price).toFixed(2)}`}
           </span>
         </div>
         <CardTitle className="mt-2 line-clamp-1 group-hover:text-yellow-500 transition-colors text-white text-sm md:text-lg">{product.name}</CardTitle>
