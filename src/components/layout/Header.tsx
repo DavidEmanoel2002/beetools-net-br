@@ -184,7 +184,9 @@ export function Header() {
                         const hasCapcut = items.some(item => item.name.toLowerCase().includes('capcut'));
                         const hasEnvato2Meses = items.some(item => item.name.toLowerCase().includes('envato elements (2 meses)'));
                         const hasEnvato3Meses = items.some(item => item.name.toLowerCase().includes('envato elements (3 meses)'));
-                        const hasFreepik = items.some(item => item.name.toLowerCase().includes('freepik'));
+                        const hasFreepik1Mes = items.some(item => item.name.toLowerCase() === 'freepik premium');
+                        const hasFreepik2Meses = items.some(item => item.name.toLowerCase() === 'freepik premium (2 meses)');
+                        const hasFreepik3Meses = items.some(item => item.name.toLowerCase() === 'freepik premium (3 meses)');
                         const hasGemini = items.some(item => item.name.toLowerCase().includes('gemini'));
                         const hasNetflix = items.some(item => item.name.toLowerCase().includes('netflix'));
                         const hasHBO = items.some(item => item.name.toLowerCase().includes('hbo max'));
