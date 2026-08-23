@@ -187,7 +187,8 @@ export function Header() {
                         const hasFreepik1Mes = items.some(item => item.name.toLowerCase() === 'freepik premium');
                         const hasFreepik2Meses = items.some(item => item.name.toLowerCase() === 'freepik premium (2 meses)');
                         const hasFreepik3Meses = items.some(item => item.name.toLowerCase() === 'freepik premium (3 meses)');
-                        const hasGemini = items.some(item => item.name.toLowerCase().includes('gemini'));
+                        const hasGemini1Mes = items.some(item => item.name.toLowerCase() === 'gemini pro (1 mês)');
+                        const hasGeminiAdvanced = items.some(item => item.name.toLowerCase() === 'gemini advanced');
                         const hasNetflix = items.some(item => item.name.toLowerCase().includes('netflix'));
                         const hasHBO = items.some(item => item.name.toLowerCase().includes('hbo max'));
                         const hasSpotify = items.some(item => item.name.toLowerCase().includes('spotify'));
@@ -207,7 +208,9 @@ export function Header() {
                           window.open('https://pay.kirvano.com/13cf057b-b532-438b-99a4-6af24a171962', '_blank');
                         } else if (hasFreepik1Mes) {
                           window.open('https://pay.kirvano.com/de06653e-b03c-48cd-89e1-31cda242efec', '_blank');
-                        } else if (hasGemini) {
+                        } else if (hasGeminiAdvanced) {
+                          window.open('https://wa.me/558896261696?text=Queria+saber+mais+sobre+o+Gemini+de+18+meses&utm_source=chatgpt.com', '_blank');
+                        } else if (hasGemini1Mes) {
                           window.open('https://pay.kirvano.com/97c06d62-658c-4b45-87e1-e1ecbc4d4cea', '_blank');
                         } else if (hasNetflix) {
                           window.open('https://pay.kirvano.com/a2fb8599-2286-4305-871f-b5fd589044c9', '_blank');
