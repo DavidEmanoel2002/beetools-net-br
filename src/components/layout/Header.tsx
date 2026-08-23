@@ -204,7 +204,7 @@ export function Header() {
                         } else if (hasFreepik3Meses) {
                           window.open('https://pay.kirvano.com/7053f9fc-143f-4884-af07-40d6659e7f98', '_blank');
                         } else if (hasFreepik2Meses) {
-                          window.open('https://pay.kirvano.com/de06653e-b03c-48cd-89e1-31cda242efec', '_blank');
+                          window.open('https://pay.kirvano.com/13cf057b-b532-438b-99a4-6af24a171962', '_blank');
                         } else if (hasFreepik1Mes) {
                           window.open('https://pay.kirvano.com/de06653e-b03c-48cd-89e1-31cda242efec', '_blank');
                         } else if (hasGemini) {
