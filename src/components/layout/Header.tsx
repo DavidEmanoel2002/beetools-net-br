@@ -201,7 +201,11 @@ export function Header() {
                           window.open('https://pay.kirvano.com/6bf0f6a8-4abc-485a-8742-578fa5a6cb84', '_blank');
                         } else if (hasEnvato3Meses) {
                           window.open('https://pay.kirvano.com/630c1a90-3cfd-477b-9f4c-0ace9eda3cfa', '_blank');
-                        } else if (hasFreepik) {
+                        } else if (hasFreepik3Meses) {
+                          window.open('https://pay.kirvano.com/7053f9fc-143f-4884-af07-40d6659e7f98', '_blank');
+                        } else if (hasFreepik2Meses) {
+                          window.open('https://pay.kirvano.com/de06653e-b03c-48cd-89e1-31cda242efec', '_blank');
+                        } else if (hasFreepik1Mes) {
                           window.open('https://pay.kirvano.com/de06653e-b03c-48cd-89e1-31cda242efec', '_blank');
                         } else if (hasGemini) {
                           window.open('https://pay.kirvano.com/97c06d62-658c-4b45-87e1-e1ecbc4d4cea', '_blank');
