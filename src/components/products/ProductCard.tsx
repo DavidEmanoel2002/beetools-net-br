@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, ShoppingCart, MessageCircle, Info } from "lucide-react";
-import { useCart } from "@/hooks/use-cart";
-import { toast } from "sonner";
+import { Check, ExternalLink, MessageCircle, Info } from "lucide-react";
+import { getPaymentLink } from "@/lib/payment-links";
 import { motion } from "framer-motion";
 import {
   Dialog,
@@ -27,11 +26,8 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product }: ProductCardProps) {
-  const { addItem } = useCart();
-
-  const handleAddToCart = () => {
-    addItem(product);
-    toast.success(`${product.name} adicionado ao carrinho!`);
+  const handleBuyNow = () => {
+    window.open(getPaymentLink(product), '_blank');
   };
 
   const handleSupportClick = () => {
@@ -145,10 +141,10 @@ export function ProductCard({ product }: ProductCardProps) {
         </ul>
       </CardContent>
       <CardFooter className="p-3 md:p-6 pt-0 md:pt-0">
-        <Button onClick={handleAddToCart} className="w-full gap-2 h-8 md:h-10 text-[10px] md:text-sm">
-          <ShoppingCart className="h-3 w-3 md:h-4 md:w-4" />
-          <span className="hidden xs:inline">Adicionar</span>
-          <span className="xs:hidden">Add</span>
+        <Button onClick={handleBuyNow} className="w-full gap-2 h-8 md:h-10 text-[10px] md:text-sm">
+          <ExternalLink className="h-3 w-3 md:h-4 md:w-4" />
+          <span className="hidden xs:inline">Comprar agora</span>
+          <span className="xs:hidden">Comprar</span>
         </Button>
       </CardFooter>
       </Card>
