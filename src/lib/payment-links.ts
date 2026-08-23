@@ -13,6 +13,9 @@ export function getPaymentLink(product: ProductLike): string {
   if (name.includes('capcut')) {
     return 'https://pay.kirvano.com/c42d9a91-6ffe-4d9a-a091-ffa597859ad8';
   }
+  if (name === 'envato elements') {
+    return 'https://pay.kirvano.com/1dbbb7a5-0bf7-4c90-b771-5b39ca2474eb';
+  }
   if (name.includes('envato elements (2 meses)')) {
     return 'https://pay.kirvano.com/6bf0f6a8-4abc-485a-8742-578fa5a6cb84';
   }
