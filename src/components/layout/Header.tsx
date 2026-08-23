@@ -181,50 +181,9 @@ export function Header() {
                     <Button 
                       className="w-full py-6 text-base font-bold"
                       onClick={() => {
-                        const hasCanva = items.some(item => item.name.toLowerCase().includes('canva'));
-                        const hasCapcut = items.some(item => item.name.toLowerCase().includes('capcut'));
-                        const hasEnvato2Meses = items.some(item => item.name.toLowerCase().includes('envato elements (2 meses)'));
-                        const hasEnvato3Meses = items.some(item => item.name.toLowerCase().includes('envato elements (3 meses)'));
-                        const hasFreepik1Mes = items.some(item => item.name.toLowerCase() === 'freepik premium');
-                        const hasFreepik2Meses = items.some(item => item.name.toLowerCase() === 'freepik premium (2 meses)');
-                        const hasFreepik3Meses = items.some(item => item.name.toLowerCase() === 'freepik premium (3 meses)');
-                        const hasGemini1Mes = items.some(item => item.name.toLowerCase() === 'gemini pro (1 mês)');
-                        const hasGeminiAdvanced = items.some(item => item.name.toLowerCase() === 'gemini advanced');
-                        const hasNetflix = items.some(item => item.name.toLowerCase().includes('netflix'));
-                        const hasHBO = items.some(item => item.name.toLowerCase().includes('hbo max'));
-                        const hasSpotify = items.some(item => item.name.toLowerCase().includes('spotify'));
-                        const hasIPTV = items.some(item => item.name.toLowerCase().includes('iptv'));
-
-                        if (hasCanva) {
-                          window.open('https://pay.kirvano.com/938feedf-3de6-4860-9058-6fb62fb86e44', '_blank');
-                        } else if (hasCapcut) {
-                          window.open('https://pay.kirvano.com/c42d9a91-6ffe-4d9a-a091-ffa597859ad8', '_blank');
-                        } else if (hasEnvato2Meses) {
-                          window.open('https://pay.kirvano.com/6bf0f6a8-4abc-485a-8742-578fa5a6cb84', '_blank');
-                        } else if (hasEnvato3Meses) {
-                          window.open('https://pay.kirvano.com/630c1a90-3cfd-477b-9f4c-0ace9eda3cfa', '_blank');
-                        } else if (hasFreepik3Meses) {
-                          window.open('https://pay.kirvano.com/7053f9fc-143f-4884-af07-40d6659e7f98', '_blank');
-                        } else if (hasFreepik2Meses) {
-                          window.open('https://pay.kirvano.com/13cf057b-b532-438b-99a4-6af24a171962', '_blank');
-                        } else if (hasFreepik1Mes) {
-                          window.open('https://pay.kirvano.com/de06653e-b03c-48cd-89e1-31cda242efec', '_blank');
-                        } else if (hasGeminiAdvanced) {
-                          window.open('https://wa.me/558896261696?text=Queria+saber+mais+sobre+o+Gemini+de+18+meses&utm_source=chatgpt.com', '_blank');
-                        } else if (hasGemini1Mes) {
-                          window.open('https://pay.kirvano.com/97c06d62-658c-4b45-87e1-e1ecbc4d4cea', '_blank');
-                        } else if (hasNetflix) {
-                          window.open('https://pay.kirvano.com/a2fb8599-2286-4305-871f-b5fd589044c9', '_blank');
-                        } else if (hasHBO) {
-                          window.open('https://pay.kirvano.com/eb140e78-7ced-4926-bd93-1ad48543a4e7', '_blank');
-                        } else if (hasSpotify) {
-                          window.open('https://pay.kirvano.com/fef9ddfc-be51-42dc-b17b-04bca176271e', '_blank');
-                        } else if (hasIPTV) {
-                          const message = `Olá, gostaria de finalizar a compra do Bee IPTV Premium. Total: R$ ${total.toFixed(2)}`;
-                          window.open(`https://wa.me/558896261696?text=${encodeURIComponent(message)}`, '_blank');
+                        if (items.length === 1) {
+                          window.open(getPaymentLink(items[0]), '_blank');
                         } else {
-
-                          // Default checkout link for other products
                           const message = `Olá, gostaria de finalizar a compra dos seguintes itens: ${items.map(i => `${i.quantity}x ${i.name}`).join(', ')}. Total: R$ ${total.toFixed(2)}`;
                           window.open(`https://wa.me/558896261696?text=${encodeURIComponent(message)}`, '_blank');
                         }
