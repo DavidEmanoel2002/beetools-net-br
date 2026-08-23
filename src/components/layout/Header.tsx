@@ -219,7 +219,8 @@ export function Header() {
                         } else if (hasSpotify) {
                           window.open('https://pay.kirvano.com/fef9ddfc-be51-42dc-b17b-04bca176271e', '_blank');
                         } else if (hasIPTV) {
-                          window.open('https://pay.kirvano.com/4519cc79-664c-42c7-b564-b84486162ea8', '_blank');
+                          const message = `Olá, gostaria de finalizar a compra do Bee IPTV Premium. Total: R$ ${total.toFixed(2)}`;
+                          window.open(`https://wa.me/558896261696?text=${encodeURIComponent(message)}`, '_blank');
                         } else {
 
                           // Default checkout link for other products
